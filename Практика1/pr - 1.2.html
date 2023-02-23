@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Морской бой</title>
+    </head>
+<body>
+
+    <body style="background-color:#4B0082;">
+    <h1 style="color:#E6E6FA">ВЫ ГОТОВЫ ПОБЕЖДАТЬ?</h1>
+
+    <input type="text" id="message"/>
+    <button onClick="Play()"> Атаковать </button>
+
+    <div id= "display", style="color:#E6E6FA; font-size: 1.5rem;"></div>
+
+    <script>
+        
+        let numberOfBoat = 0;
+
+        let pole = [
+                ['.','.','x','x','x','.','.','.','.','.'],
+                ['x','.','.','.','.','.','x','x','x','x'],
+                ['.','.','.','.','.','.','.','.','.','.'],
+                ['x','.','.','x','x','x','.','.','.','x'],
+                ['.','.','.','.','.','.','.','.','.','x'],
+                ['.','x','.','.','.','.','.','x','.','.'],
+                ['.','x','.','.','.','.','.','.','.','.'],
+                ['.','.','.','.','.','.','x','.','.','.'],
+                ['.','.','.','x','.','.','x','.','.','.'],
+                ['.','.','.','.','.','.','.','.','.','.']
+            ];
+
+            let myPole = [
+                ['.','.','.','.','.','.','.','.','.','.'],
+                ['.','.','.','.','.','.','.','.','.','.'],
+                ['.','.','.','.','.','.','.','.','.','.'],
+                ['.','.','.','.','.','.','.','.','.','.'],
+                ['.','.','.','.','.','.','.','.','.','.'],
+                ['.','.','.','.','.','.','.','.','.','.'],
+                ['.','.','.','.','.','.','.','.','.','.'],
+                ['.','.','.','.','.','.','.','.','.','.'],
+                ['.','.','.','.','.','.','.','.','.','.'],
+                ['.','.','.','.','.','.','.','.','.','.']
+            ];
+
+            const display = document.querySelector("#display");
+            
+            display.innerHTML += "<p></p> "
+
+            for(let i = 65; i <= 75; i++){
+
+                if (i == 73){
+
+                    i += 1;
+
+                }
+
+                let ch = String(i);
+
+                display.innerHTML += String.fromCharCode(ch);
+            }
+
+            for(let i = 0; i < myPole.length; i++){
+
+                display.innerHTML += "<p></p> " + (i + 1)  + ' ';
+
+                for(let j = 0; j < myPole[i].length; j++){
+
+                    display.innerHTML += myPole[i][j] + ' ';
+                }
+            }
+
+            function Print(){
+
+                display.innerHTML = " ";
+
+                display.innerHTML += "<p></p> "
+
+            for(let i = 65; i <= 75; i++){
+
+                if (i == 73){
+
+                    i += 1;
+
+                }
+
+                let ch = String(i);
+
+                display.innerHTML += String.fromCharCode(ch);
+            }
+
+                for(let i = 0; i < myPole.length; i++){
+
+                    display.innerHTML += "<p></p> " + (i + 1);
+
+                    for(let j = 0; j < myPole[i].length; j++){
+
+                        display.innerHTML += myPole[i][j] + ' ';
+                    }
+                }
+
+            }
+        
+            function Boat(){
+
+                if (myPole[1][0] == 'x'){
+
+                    if(pole[1][0] == 'x'){
+
+                        pole[1][0] = '#';
+
+                        numberOfBoat += 1;
+
+                        alert("Убит! Количество убитых кораблей = " + numberOfBoat);
+                    
+                    }
+                }
+                if (myPole[3][0] == 'x'){
+
+                    if(pole[3][0] == 'x'){
+
+                        pole[3][0] = '#';
+
+                        numberOfBoat += 1;
+
+                        alert("Убит! Количество убитых кораблей = " + numberOfBoat);
+                    
+                    }
+                }
+                if (myPole[8][3] == 'x'){
+
+                    if(pole[8][3] == 'x'){
+
+                        pole[8][3] = '#';
+
+                        numberOfBoat += 1;
+
+                        alert("Убит! Количество убитых кораблей = " + numberOfBoat);
+                    
+                    }
+                }
+                if(myPole[5][7] == 'x'){
+
+                    if(pole[5][7] == 'x'){
+
+                        pole[5][7] = '#';
+
+                        numberOfBoat += 1;
+
+                        alert("Убит! Количество убитых кораблей = " + numberOfBoat);
+                    
+                    }
+
+                }
+                if (myPole[5][1] == 'x' && myPole[6][1] == 'x'){
+
+                    if (pole[5][1] == 'x' && pole[6][1] == 'x'){
+
+                        pole[5][1] = '#';
+                        pole[6][1] = '#';
+
+                        numberOfBoat += 1;
+
+                        alert("Убит! Количество убитых кораблей = " + numberOfBoat);
+                    
+                    }
+
+                }
+                if (myPole[7][6] == 'x' && myPole[8][6] == 'x'){
+
+                    if (pole[7][6] == 'x' && pole[8][6] == 'x'){
+
+                        pole[7][6] = '#';
+                        pole[8][6] = '#';
+
+                        numberOfBoat += 1;
+
+                        alert("Убит! Количество убитых кораблей = " + numberOfBoat);
+                    
+                    }
+
+                }
+                if (myPole[3][9] == 'x' && myPole[4][9] == 'x'){
+
+                    if (pole[3][9] == 'x' && pole[4][9] == 'x'){
+
+                        pole[3][9] = '#';
+                        pole[4][9] = '#';
+
+                        numberOfBoat += 1;
+
+                        alert("Убит! Количество убитых кораблей = " + numberOfBoat);
+                    
+                    }
+
+                }
+                if (myPole[0][2] == 'x' && myPole[0][3] == 'x' && myPole[0][4] == 'x'){
+
+                    if(pole[0][2] == 'x' && pole[0][3] == 'x' && pole[0][4] == 'x'){
+                        
+                        pole[0][2] = '#';
+                        pole[0][3] = '#';
+                        pole[0][4] = '#';
+
+                        numberOfBoat += 1;
+
+                        alert("Убит! Количество убитых кораблей = " + numberOfBoat);
+
+                    }
+
+                }
+                if(myPole[3][3] == 'x' && myPole[3][4] == 'x' && myPole[3][5] == 'x'){
+                    
+                    if(pole[3][3] == 'x' && pole[3][4] == 'x' && pole[3][5] == 'x'){
+                        
+                        pole[3][3] = '#';
+                        pole[3][4] = '#';
+                        pole[3][5] = '#';
+
+                        numberOfBoat += 1;
+
+                        alert("Убит! Количество убитых кораблей = " + numberOfBoat);
+
+                    }
+
+                }
+                if (myPole[1][6] == 'x' && myPole[1][7] == 'x' && myPole[1][8] == 'x'&& myPole[1][9] == 'x'){
+
+                    if(pole[1][6] == 'x' && pole[1][7] == 'x' && pole[1][8] == 'x' && pole[1][9] == 'x'){
+                        
+                        pole[1][6] = '#';
+                        pole[1][7] = '#';
+                        pole[1][8] = '#';
+                        pole[1][9] = '#';
+
+                        numberOfBoat += 1;
+
+                        alert("Убит! Количество убитых кораблей = " + numberOfBoat);
+
+                    }
+
+                }
+
+            }
+
+        function Proverka(i, j){
+
+            let numberOfBoat = 0;
+            let bukva = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K'];
+
+            if(i < 'A' || i > 'K'){
+
+                alert("Такой координаты не существует");
+
+            }
+            else{  
+
+                for(let b = 0; b < bukva.length; b++){
+
+                    if(bukva[b] == i){
+
+                        i = b;
+                        break;
+
+                    }
+
+                }
+
+                if(j < '0' || j > '9'){
+
+                    alert("Такой координаты не существует");
+
+                }
+
+                if(pole[j][i] == 'x') {
+
+                    alert("Попал!");
+
+                    myPole[j][i] = 'x';
+
+                    Print();
+
+                    Boat(j, i);
+
+                }
+                else if (pole[j][i] == '.'){
+    
+                    myPole[j][i] = '#';
+
+                    Print();
+
+                    alert("Мимо!");
+                } 
+
+            }
+        }
+
+
+        function Play(){
+        
+            let i = document.getElementById("message").value[0];
+            let j;
+            
+            if(i == 'I'){
+
+                i = 'J';
+
+            }
+
+            if(document.getElementById("message").value[2] == null){
+
+                j = Number(document.getElementById("message").value[1]) - 1;
+
+            } else{
+
+                j = Number(document.getElementById("message").value[1] + document.getElementById("message").value[2]) - 1;
+
+            }
+
+            if (numberOfBoat != 10){
+                
+                Proverka(i, j);
+
+            } else{
+
+                alert("Победа!");
+
+            }
+
+        }
+       // что то не так с подсчетом кораблей
+
+    </script>
+
+</body>
+
+</html>
