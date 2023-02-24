@@ -55,7 +55,6 @@
 
     function Proverka(i, j){
 
-        let numberOfBoat = 0;
         let bukva = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J', 'K'];
 
         if(i < 'A' || i > 'K'){
