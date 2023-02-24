@@ -11,11 +11,19 @@
         h1{
             color: rgb(146, 71, 146);
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2.1rem;
         }
         p{
             color:rgb(128, 71, 146);
             font-family:Arial, Helvetica, sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.5rem;
+        }
+        body{
+            background-color: rgb(235, 219, 208);
+        }
+        div{
+            color:rgb(128, 71, 146);
+            font-size: 1.5rem;
         }
     </style> 
 
@@ -28,15 +36,17 @@
 
     <h1>Задание 1</h1>
     <p>Функция находит минимальный элемент в массиве и возвращает его.
-        С использованием этой функции реализовать сортировку выбором.
+        <br>С использованием этой функции реализовать сортировку выбором.</br>
     </p>
 
-    <p style = "font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+    <p style = "font-size: 1.6rem;">
         Введите числа через пробел!
     </p>
     
     <input type="text" id="message"/>
-    <button onClick="Read()">Отсортировать</button>
+    <button onClick="Read()"; style="color:rgb(128, 71, 146);">Отсортировать</button>
+
+    <div id= "display"></div>
 
 </body>
 

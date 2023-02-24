@@ -1,8 +1,11 @@
 function Read(){
 
+        const display = document.querySelector("#display");
         let a = document.getElementById("message").value
         let proverka = true
         let countNum = 0
+
+        display.innerHTML = '';
 
         for (let i = 0; i < a.length; i++) {
 
@@ -62,7 +65,7 @@ function Read(){
 
             }
 
-            alert(Sort(v))
+            display.innerHTML += Sort(v);
         
         }
     }  
