@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
 const containerForButtons = document.createElement("div");
-containerForButtons.setAttribute("class","area");
+containerForButtons.setAttribute("class", "area");
 body.append(containerForButtons);
 
 for (let i = 0; i < 100; i++) {
@@ -11,7 +11,7 @@ for (let i = 0; i < 100; i++) {
     button.id = `${i}`;
 }
 
-for( let i = 0; i<100; i++){
+for (let i = 0; i < 100; i++) {
     let tmp = document.getElementById(`${i}`);
-    tmp.setAttribute('onclick',`Play(${tmp.id})`);
+    tmp.setAttribute('onclick', `Play(${tmp.id})`);
 }

@@ -1,0 +1,52 @@
+.rightpic {
+    float: right;
+}
+
+button {
+    height: 3rem;
+    width: 3rem;
+    margin: 2px;
+    background-color: #E6E6FA;
+    color:#4B0082;
+}
+
+.area {
+    width: 520px;
+    height: 520px;
+    margin-left: 50px;
+
+}
+
+.colon {
+
+    display: flex;
+
+    margin-left: 50px;
+}
+
+.colon p {
+
+    margin: 18.5px;
+
+    color:#E6E6FA;
+
+    font: bold;
+}
+
+.row {
+
+    position: absolute;
+    top: 28.2%;
+
+}
+
+.row p {
+
+    margin-bottom: 35px;
+
+    color:#E6E6FA;
+
+    font: bold;
+
+
+}
