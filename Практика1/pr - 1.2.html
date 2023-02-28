@@ -2,60 +2,110 @@
 
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <title>Морской бой</title>
-        <style>
+<head>
+    <meta charset="utf-8">
+    <title>Морской бой</title>
+    <style>
         .rightpic {
-        float: right;
+            float: right;
         }
-        </style>
-    </head>
 
-    <body style="background-color:#4B0082;">
+        button {
+            height: 3rem;
+            width: 3rem;
+            margin: 2px;
+            background-color: #E6E6FA;
+            color:#4B0082;
+        }
+
+        .area {
+            width: 520px;
+            height: 520px;
+            margin-left: 50px;
+
+        }
+
+        .colon {
+
+            display: flex;
+
+            margin-left: 50px;
+        }
+
+        .colon p {
+
+            margin: 18.5px;
+
+            color:#E6E6FA;
+
+            font: bold;
+        }
+
+        .row {
+
+            position: absolute;
+            top: 28.2%;
+
+        }
+
+        .row p {
+
+            margin-bottom: 35px;
+
+            color:#E6E6FA;
+
+            font: bold;
+
+
+        }
+
+    </style>
+</head>
+
+<body style="background-color:#4B0082;">
 
         <h1 style="color:#E6E6FA">Задание 2<br>Морской бой</br></h1>
 
-        <img src="капибара2.jpg" width="750" height="554" class = "rightpic">
+    <!-- <img src="капибара2.jpg" width="750" height="554" class = "rightpic">-->
 
-        <h2 style="color:#E6E6FA">Вы готовы побожедать?</h2>
+    <h2 style="color:#E6E6FA">Вы готовы побожедать?</h2>
 
-        <div id= "display" class = "colon">
+    <div id="display" class="colon">
 
-            <p>A</p>
-            <p>B</p>
-            <p>C</p>
-            <p>D</p>
-            <p>E</p>
-            <p>F</p>
-            <p>G</p>
-            <p>H</p>
-            <p>J</p>
-            <p>K</p>
-            <p>L</p>
-    
-    
-        </div>
-    
-        <div class = "row">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p>10</p>
-        </div>
-        
-        <script src="ButtonAdd.js"></script>
+        <p>A</p>
+        <p>B</p>
+        <p>C</p>
+        <p>D</p>
+        <p>E</p>
+        <p>F</p>
+        <p>G</p>
+        <p>H</p>
+        <p>J</p>
+        <p>K</p>
+        <p>L</p>
 
-        <script src="PlayFunction.js"></script>
-        <script src="Boats.js"></script>
 
-        
-    </body>
+    </div>
+
+    <div class="row">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+    </div>
+
+    <script src="ButtonAdd.js"></script>
+
+    <script src="PlayFunction.js"></script>
+    <script src="Boats.js"></script>
+
+
+</body>
 
 </html>
