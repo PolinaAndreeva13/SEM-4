@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <style>
+        .rightpic {
+        float: right;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div id= "display"></div>
+        <script>
+            const display = document.querySelector("#display");
+            const body = document.querySelector("body");
+            const containerForButtons = document.createElement("div");
+            body.append(containerForButtons);
+
+            for(let i = 1; i <= 100; i++){
+                const button = document.createElement("button");
+                containerForButtons.append(button);
+                button.id = `${i}`;
+            }
+        </script>     
+    </body>
+</html>
