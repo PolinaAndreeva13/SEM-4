@@ -7,7 +7,13 @@ button {
     width: 3rem;
     margin: 2px;
     background-color: #E6E6FA;
-    color:#4B0082;
+    color:rgb(75, 0, 130);
+    border-color: #4B0082;
+    vertical-align: middle;
+}
+
+button:hover{
+    background-color: rgb(119, 73, 169);
 }
 
 .area {
@@ -26,7 +32,7 @@ button {
 
 .colon p {
 
-    margin: 18.5px;
+    margin: 20.8px;
 
     color:#E6E6FA;
 
@@ -49,4 +55,8 @@ button {
     font: bold;
 
 
+}
+
+img{
+    border-radius: 20%;
 }
