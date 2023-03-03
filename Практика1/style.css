@@ -58,5 +58,8 @@ button:hover{
 }
 
 img{
-    border-radius: 20%;
+    position: absolute;
+    top: 170px;
+    left: 700px;
+    width: 50%;
 }
